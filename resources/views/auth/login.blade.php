@@ -48,6 +48,15 @@
                 <span>Login with Google</span>
             </a>
         </div>
+<div class="flex items-center justify-center mt-4">
+    <a href="{{ route('facebook.redirect') }}"
+        class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24">
+            <path fill="white" d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-2.9h2.5V9.5c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.6h-1.3c-1.3 0-1.7.8-1.7 1.6v1.9h2.9l-.5 2.9h-2.4v7C18.3 21.1 22 17 22 12z"/>
+        </svg>
+        <span>Login with Facebook</span>
+    </a>
+</div>
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))

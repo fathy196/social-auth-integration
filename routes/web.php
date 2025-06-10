@@ -11,6 +11,10 @@ Route::get('/', function () {
 Route::get('/auth/google', [SocialiteController::class, 'googleLogin'])->name('google.redirect');
 Route::get('/auth/google-callback', [SocialiteController::class, 'googleCallback'])->name('google.callback');
 
+Route::get('/auth/facebook', [SocialiteController::class, 'facebookLogin'])->name('facebook.redirect');
+Route::get('/auth/facebook/callback', [SocialiteController::class, 'facebookCallback']);
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
